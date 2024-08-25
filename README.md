@@ -1,11 +1,16 @@
 # CODTECH- LEVEL 1 TASK 1, 2
 **LEVEL 1 TASK 1**
 
-Name: TUPPATHI VAISHNAVI
+Name: TUPPATHI VAISHNAVI 
+
 Company: CODTECH IT SOLUTIONS
+
 Id: CT6WTDS0294
+
 Domain: Full Stack Web Development
+
 Duration: 10th July to 25th August 2024
+
 Mentor: **Neela Santosh Kumar**
 
 **Overview of the project**
