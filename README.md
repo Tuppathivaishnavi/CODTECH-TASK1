@@ -27,5 +27,7 @@ Features
 This project is a weather forecast web app built with HTML, CSS, and JavaScript. It allows users to enter a location and view the current weather and a 5-day forecast.
 
 HTML: Provides structure with a search bar, current weather display, and forecast section.
+
 CSS: Styles the layout with a clean, centered design, responsive weather info, and forecast items.
+
 JavaScript: Fetches weather data from the OpenWeatherMap API, updates the UI with current conditions and forecasts, and handles basic errors.
