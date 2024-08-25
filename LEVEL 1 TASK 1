@@ -1,0 +1,117 @@
+#CSS Code 
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+h1 {
+    text-align: center;
+}
+
+input[type="text"] {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+.delete {
+    float: right;
+    cursor: pointer;
+    color: red;
+}
+
+
+
+#HTML 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List App</title>
+    <link rel="stylesheet" href="Styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>To-Do List</h1>
+        <input type="text" id="taskInput" placeholder="Add new task...">
+        <input type="time" id="taskTime">
+        <select id="taskPriority">
+            <option value="Low">Low</option>
+            <option value="Medium">Medium</option>
+            <option value="High">High</option>
+        </select>
+        <button onclick="addTask()">Add Task</button>
+        <ul id="taskList"></ul> <!-- This was missing -->
+    </div>
+    <script src="javascripts.js"></script>
+</body>
+</html>
+
+
+
+
+  #JavaScript
+
+function addTask() {
+    var taskInput = document.getElementById("taskInput").value;
+    var taskTime = document.getElementById("taskTime").value;
+    var taskPriority = document.getElementById("taskPriority").value;
+    var taskList = document.getElementById("taskList");
+
+    if (taskInput.trim() === "") {
+        alert("Please enter a task!");
+        return;
+    }
+
+    var li = document.createElement("li");
+    var taskDetails = document.createElement("span");
+    taskDetails.textContent = taskInput + " - Time: " + taskTime + " - Priority: " + taskPriority;
+    li.appendChild(taskDetails);
+
+    var deleteButton = document.createElement("span");
+    deleteButton.textContent = "❌";
+    deleteButton.className = "delete";
+    deleteButton.onclick = function() {
+        this.parentElement.remove();
+    };
+
+    li.appendChild(deleteButton);
+    taskList.appendChild(li);
+
+    // Clear input fields after adding task
+    document.getElementById("taskInput").value = "";
+    document.getElementById("taskTime").value = "";
+}
+
